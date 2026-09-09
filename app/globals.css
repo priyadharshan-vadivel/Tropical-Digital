@@ -13,41 +13,52 @@
   --white: #fbf9f4;
 }
 
-* {
-  box-sizing: border-box;
-}
+/*
+ * Tailwind v4 emits utilities inside `@layer utilities`. Any rule left outside a
+ * layer is unlayered CSS, and unlayered CSS always wins over layered CSS regardless
+ * of specificity — so plain resets here would silently beat every `text-[...]`,
+ * `bg-[...]`, etc. utility class applied to the same elements (e.g. `a { color:
+ * inherit }` was overriding every link's explicit text-color utility). Wrapping
+ * these resets in `@layer base` puts them in the same layer system Tailwind uses,
+ * so utility classes correctly override them again.
+ */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Bricolage Grotesque", "Segoe UI", sans-serif;
-  text-rendering: optimizeLegibility;
-}
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+  }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-button,
-input,
-textarea {
-  font: inherit;
-}
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
 
-::selection {
-  background: var(--ink);
-  color: var(--paper);
+  ::selection {
+    background: var(--ink);
+    color: var(--paper);
+  }
 }
 
 .container {
