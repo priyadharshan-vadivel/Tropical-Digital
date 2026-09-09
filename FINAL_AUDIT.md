@@ -110,7 +110,7 @@ Documented in `.env.example` (present in the repo root, no secrets committed):
 
 ```
 RESEND_API_KEY=
-CONTACT_EMAIL=priyanvadivell442@gmail.com
+CONTACT_EMAIL=satyajith.palliyil@gmail.com
 EMAIL_FROM="Tropical Digital Website <onboarding@resend.dev>"
 ```
 

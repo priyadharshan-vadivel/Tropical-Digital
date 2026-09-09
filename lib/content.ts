@@ -45,7 +45,7 @@ export const company = {
   ],
   corporateOffice: "United Kingdom",
   internationalPresence: ["India", "United Arab Emirates"],
-  contactEmail: "priyanvadivell442@gmail.com",
+  contactEmail: "satyajith.palliyil@gmail.com",
 } as const;
 
 export const serviceFamilies = [
